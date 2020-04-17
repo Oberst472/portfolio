@@ -4,6 +4,8 @@
             <div class="section-header__content">
                 <h1 class="section-header__title">Мое имя Александр</h1>
                 <h2 class="section-header__subtitle">Я программист из Одессы</h2>
+                <UiBtn class="section-header__works-btn">Мои работы</UiBtn>
+                <UiBtn class="section-header__about-btn" theme="transparent">Обо мне</UiBtn>
             </div>
         </div>
     </section>
@@ -31,6 +33,7 @@ export default {}
             background-image: url('/assets/images/header-bg.jpg');
             mix-blend-mode: screen;
             opacity: 0.2;
+            pointer-events: none;
         }
         .wrap {
             height: 100%;
@@ -56,6 +59,15 @@ export default {}
 
             @include adaptiveFont(16px, 18px);
             line-height: 1.2;
+        }
+        &__works-btn {
+            max-width: 283px;
+            margin-top: 60px;
+
+        }
+        &__about-btn {
+            max-width: 283px;
+            margin-top: 25px;
         }
     }
 </style>
