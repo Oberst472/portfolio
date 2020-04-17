@@ -13,14 +13,19 @@ $mobile: (
 
 $gutter: 30px;
 
-$family--default: Avenir, Helvetica, Arial, sans-serif;
+$family--default: ProximaNova, Helvetica, Arial, sans-serif;
+$family--primary: Avenir, Helvetica, Arial, sans-serif;
 $family--primary: Calibri, sans-serif;
 
 $weight--tiny: 300;
 $weight--regular: 400;
-$weight--bold: 400;
+$weight--bold: 700;
 
-$color--text: #121212;
+$color--text-base: #828282;
+$color--text-dark: #4F4F4F;
+$color--text-light: #ffffff;
+
+$color--snow: #ffffff;
 $color--dark: #1d1d1d;
 $color--primary: #26a69a;
 $color--accent: #9c27b0;
