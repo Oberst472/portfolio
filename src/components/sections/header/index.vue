@@ -3,7 +3,7 @@
         <div class="wrap">
             <div class="section-header__content">
                 <h1 class="section-header__title">Мое имя Александр</h1>
-                <h2 class="section-header__subtitle">Я программист из Одессы</h2>
+                <span class="section-header__subtitle">Я программист из Одессы</span>
                 <UiBtn class="section-header__works-btn">Мои работы</UiBtn>
                 <UiBtn class="section-header__about-btn" theme="transparent">Обо мне</UiBtn>
             </div>
@@ -12,7 +12,10 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -30,10 +33,12 @@ export default {}
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/assets/images/header-bg.jpg');
+            background-image: url('~@/assets/images/header-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
             mix-blend-mode: screen;
-            opacity: 0.2;
             pointer-events: none;
+            opacity: 0.2;
         }
         .wrap {
             height: 100%;
@@ -56,6 +61,7 @@ export default {}
             text-align: left;
             color: #d8d8d8;
             text-transform: lowercase;
+            font-weight: $weight--semi-bold;
 
             @include adaptiveFont(16px, 18px);
             line-height: 1.2;
