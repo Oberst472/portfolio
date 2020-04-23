@@ -23,6 +23,14 @@ export default {
       type: String,
       default: 'base'
     },
+    small: {
+      type: Boolean,
+      default: false
+    },
+    borderNone: {
+      type: Boolean,
+      default: false
+    },
     fill: Boolean,
     shadow: Boolean,
     stretch: Boolean,
@@ -38,6 +46,9 @@ export default {
       return {
         [`ui-btn--theme-${this.theme}`]: true,
         'ui-btn--fill': this.fill,
+        'ui-btn--size-default': !this.small,
+        'ui-btn--size-small': this.small,
+        'ui-btn--border-none': this.borderNone,
         'ui-btn--disabled': this.disabled
       }
     },
@@ -64,7 +75,6 @@ export default {
 <style lang="scss" scoped>
     .ui-btn {
         background-color: transparent;
-        font-size: 18px;
         border: 1px solid #D9D9D9;
         line-height: 0;
         transition-duration: 0.3s;
@@ -80,7 +90,6 @@ export default {
 
         &--theme {
             &-base {
-                height: 61px;
                 background-color: $color--snow;
                 color: #7A761D;
                 transition-property: background-color, color;
@@ -90,7 +99,6 @@ export default {
                 }
             }
             &-transparent {
-                height: 61px;
                 background-color: transparent;
                 color: $color--snow;
                 transition-property: background-color, color;
@@ -99,6 +107,22 @@ export default {
                     color: $color--snow
                 }
             }
+        }
+        &--size {
+            &-default {
+                height: 61px;
+                padding: 15px;
+                box-sizing: border-box;
+                font-size: 18px;
+            }
+            &-small {
+                height: 30px;
+                padding: 5px;
+                font-size: 14px;
+            }
+        }
+        &--border-none {
+            border: 0
         }
 
         &.is-disabled {

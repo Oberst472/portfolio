@@ -5,7 +5,7 @@
                 <div class="section-about__photo-box">
                     <div class="section-about__photo-sub-box">
                         <transition name="fade" mode="out-in">
-                            <UiBtn class="section-about__btn" theme="transparent" @click="isActive = true" v-if="!isActive">Посмотреть на меня</UiBtn>
+                            <UiBtn class="section-about__btn" theme="transparent" @click="isActive = true" v-if="!isActive">Тут я</UiBtn>
                             <img class="section-about__photo" src="@/assets/images/photo.jpg" alt="Фото" v-else>
                         </transition>
                     </div>
@@ -14,28 +14,13 @@
                     <h2 class="section-about__title">Кто я?</h2>
                     <p class="section-about__desc">
                        Привет, меня зовут Александр, и я фронтенд-разработчик.
-                        Погружние в веб разработку состоялось в 2012 году после случайного знакомства с HTML и CSS.
-                       Мы полюбили друг друга с первого взгляда, прошло уже 8 лет, но мы до сих пор вместе и
-                        ни разу об этом не пожалел=)
+                    </p>
+                    <p class="section-about__desc">
+                        Мое погружение в веб началось в 2012 году после случайного знакомства с HTML и CSS. В итоге погрузился так глубоко что
+                        мы уже 8 лет вместе=)
                     </p>
                     <h3 class="section-about__title">Что я умею?</h3>
-                    <p class="section-about__desc">
-                        HTML и CSS знаю практически досконально. Боевой препроцессор для разработки - SCSS, но при необходимости использую и LESS и Stylus.
-                        JS на достаточно высоком уровне, при разработке использую фичи современных стандартов.
-                    </p>
-                    <p class="section-about__desc">
-                        Для разработки SPA как оснофной фреймворк использую Vue.js в связке с Vue Router и Vuex.
-                    </p>
-                    <p class="section-about__desc">
-                        SSR приложения разрабатываю на Nuxt.js. Поверхностно знаком с Angular и React, серьезные приложения на них не писал,
-                        знакомился для общего развития.
-                    </p>
-                    <p class="section-about__desc">
-                        Знаю Node.js но коммерческие проекты на нем не делал, так как позиционирую себя как фронт мастер. Для себя писал довольно сложный бекенд на node.js, так что если заставит нужда, поднять Rest сервер или написать какую то бекенд логику смогу.
-                    </p>
-                    <p class="section-about__desc">
-                        Как любой уважающий себя разработчик знаком с Gulp (но довольно давно не использовал), Webpack (поэтому и не использую Gulp)
-                    </p>
+                    <BlockAddInfo />
                 </div>
             </div>
         </div>
@@ -43,7 +28,11 @@
 </template>
 
 <script>
+  import BlockAddInfo from './add'
   export default {
+    components: {
+      BlockAddInfo
+    },
     data () {
       return {
         isActive: false
@@ -64,6 +53,8 @@
             display: grid;
             grid-template-columns: 350px 1fr;
             grid-gap: $gutter;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
         &__photo-box {
             display: inline-flex;
@@ -110,7 +101,7 @@
 
         }
         &__desc {
-            @include adaptiveFont(14px, 18px);
+            @include adaptiveFont(14px, 16px);
             color: #E4E4E4;
             text-align: left;
             margin-bottom: $gutter / 2;

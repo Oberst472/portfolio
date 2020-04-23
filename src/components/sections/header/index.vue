@@ -3,7 +3,7 @@
         <div class="wrap">
             <div class="section-header__content">
                 <h1 class="section-header__title">Мое имя Александр</h1>
-                <span class="section-header__subtitle">Я программист из Одессы</span>
+                <span class="section-header__subtitle">я фронтенд-разработчик</span>
                 <UiBtn class="section-header__works-btn">Мои работы</UiBtn>
                 <UiBtn class="section-header__about-btn" theme="transparent">Обо мне</UiBtn>
             </div>
