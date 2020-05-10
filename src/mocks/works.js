@@ -13,6 +13,12 @@ export const portfolio = [
         preview: '5.jpg',
         link: 'https://specials.pikabu.ru/pik/timeline/',
         description: 'Ну оочеь заморочный проект для picabu.ru. Куча анимаций, свистелок и вертелок. Проект сделан на vue.js'
+      },
+      {
+        title: 'Роснефть ко дню победы',
+        preview: '15.jpg',
+        link: 'https://victory75.tass.ru/',
+        description: 'Проект посвященный дню победы'
       }
     ]
   },
@@ -47,6 +53,18 @@ export const portfolio = [
         preview: '4.jpg',
         link: 'https://zookeshakzn.ru/',
         description: 'Многостраничный интернет магазин товаров для братьев наших меньших под управлением CMS Wordpress. Адаптивная верстка и немного нативного js'
+      },
+      {
+        title: 'Мегафон. Перезагрузка',
+        preview: '10.jpg',
+        link: 'https://zookeshakzn.ru/',
+        description: 'Многостраничный интернет магазин товаров для братьев наших меньших под управлением CMS Wordpress. Адаптивная верстка и немного нативного js'
+      },
+      {
+        title: 'Конкурс Avito',
+        preview: '14.jpg',
+        link: 'https://specials.pikabu.ru/avito/avito-challenge/',
+        description: 'Неюольшой сайт для конкурса Picabu и Avito'
       }
     ]
   },
@@ -60,6 +78,12 @@ export const portfolio = [
         description: 'Новогодний тест для сайта picabu.ru. Сделан на vue.js'
       },
       {
+        title: 'Игра Memory',
+        preview: '13.jpg',
+        link: 'https://cs.specials.pikabu.ru/games/memory/',
+        description: 'Игра Memory Сделана на vue.js'
+      },
+      {
         title: 'Взломай игру',
         preview: '8.jpg',
         link: 'https://specials.sports.ru/mutator/',
@@ -70,7 +94,26 @@ export const portfolio = [
         preview: '9.jpg',
         link: 'https://www.sports.ru/tribuna/blogs/parimatchru/2710417.html',
         description: 'Мини игра для сайта sports.ru. Написана на vue.js'
-      }
+      },
+      {
+        title: 'Захвати мир с eBay',
+        preview: '11.jpg',
+        link: 'https://specials.pikabu.ru/ebay/game/',
+        description: 'Мини игра для совместного проекта pikabu и eBay. Написана на vue.js'
+      },
+      {
+        title: 'Интерактивный квест',
+        preview: '12.jpg',
+        link: 'https://quest.extremum.gg/',
+        description: 'Мини игра для совместного проекта pikabu и eBay. Написана на vue.js'
+      },
+      {
+        title: 'Тест Дакар',
+        preview: '16.jpg',
+        link: 'http://s5o.ru/special/motul-dacar-test/',
+        description: 'Мини игра для совместного проекта pikabu и eBay. Написана на vue.js'
+      },
+
     ]
   }
 

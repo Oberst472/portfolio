@@ -12,22 +12,19 @@
             <transition name="top" mode="out-in">
                 <div class="section-about__add-content" v-if="isActive === 'html'" key="html">
                     <p class="section-about__desc">
-                        HTML и CSS знаю практически досконально. Верстаю и на флексах и на гридах. Боевой препроцессор для разработки - SCSS, в случае необходимости без проблем использую LESS и Stylus. Понимаю принципы методологии БЭМ
+                        HTML и CSS знаю практически досконально. Верстаю и на флексах и на гридах. Боевой препроцессор для разработки - SCSS, в случае необходимости без проблем использую LESS и Stylus. Понимаю и использую принципы методологии БЭМ
 
-                    </p>
-                    <p class="section-about__desc">
-                        Верстку на кроссбраузерность проверяю во всех современных браузерных движках (кроме богомерзкого internet explorer ниже 11 версии)
                     </p>
                 </div>
                 <div class="section-about__add-content" v-if="isActive === 'js'" key="js">
                     <p class="section-about__desc">
-                        Пишу на js, активно использую фичи свежих стандартов
+                        Хорошо знаю js, активно использую фичи свежих стандартов
                     </p>
                     <p class="section-about__desc">
-                        Основной боевой фреймворк Vue.js. Знаю на высоком уровне, люблю его, слежу за обновлениями и в курсе всех событий и дополнений. Естественно Vue Router и Vuex.
+                        Основной боевой фреймворк Vue.js. Знаю на высоком уровне, слежу за обновлениями, в курсе всех движений вокруг этого фреймворка. Естественно Vue Router и Vuex.
                     </p>
                     <p class="section-about__desc">
-                        Для SSR приложений преддпочитаю <a title="Перейти на сайт" class="section-about__link" href="https://ru.nuxtjs.org/" target="_blank">Nuxt.js</a>. Люблю его за простоту и минималистичность. Приходилось работать с
+                        Для SSR приложений предпочитаю <a title="Перейти на сайт" class="section-about__link" href="https://ru.nuxtjs.org/" target="_blank">Nuxt.js</a>. Люблю его за простоту и минималистичность. Приходилось работать с
                         <a title="Перейти на сайт" class="section-about__link" href="https://quasar.dev/" target="_blank">Quasar</a>  Поверхностно знаком с Angular и React, серьезные приложения на них не писал,
                         знакомился для общего развития.
                     </p>
@@ -36,7 +33,7 @@
                         <a title="Перейти на сайт" class="section-about__link" href="https://www.mongodb.com/" target="_blank">mongoDB</a>, как в прочем и продолжаю писать, так что если заставит нужда, поднять rest сервер или написать необходимую бекенд логику смогу.
                     </p>
                     <p class="section-about__desc">
-                        При разработке активно использую git. Работал с <a title="Перейти на сайт" class="section-about__link" href="https://gulpjs.com/" target="_blank">gulp</a>, в последнее время больше работаю с
+                        При разработке использую git. Работал с <a title="Перейти на сайт" class="section-about__link" href="https://gulpjs.com/" target="_blank">gulp</a>, в последнее время больше работаю с
                         <a title="Перейти на сайт" class="section-about__link" href="https://webpack.js.org/" target="_blank">webpack</a>
                     </p>
                 </div>

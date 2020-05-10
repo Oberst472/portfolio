@@ -5,7 +5,7 @@
                 <div class="section-about__photo-box">
                     <div class="section-about__photo-sub-box">
                         <transition name="fade" mode="out-in">
-                            <UiBtn class="section-about__btn" theme="transparent" @click="isActive = true" v-if="!isActive">Тут я</UiBtn>
+                            <UiBtn class="section-about__btn" theme="transparent" @click="isActive = true" v-if="!isActive">Показать фото</UiBtn>
                             <img class="section-about__photo" src="@/assets/images/photo.jpg" alt="Фото" v-else>
                         </transition>
                     </div>
@@ -16,8 +16,7 @@
                        Привет, меня зовут Александр, и я фронтенд-разработчик.
                     </p>
                     <p class="section-about__desc">
-                        Мое погружение в веб началось в 2012 году после случайного знакомства с HTML и CSS. В итоге погрузился так глубоко что
-                        мы уже 8 лет вместе=)
+                        Познакомился с вебом в 2012 г, с тех пор это моя основная работа
                     </p>
                     <h3 class="section-about__title">Что я умею?</h3>
                     <BlockAddInfo />
