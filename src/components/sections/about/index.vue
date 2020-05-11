@@ -1,5 +1,5 @@
 <template>
-    <div class="section-about">
+    <div class="section-about" id="about">
         <div class="wrap">
             <div class="section-about__content">
                 <div class="section-about__photo-box">
@@ -13,10 +13,7 @@
                 <div class="section-about__desc-box">
                     <h2 class="section-about__title">Кто я?</h2>
                     <p class="section-about__desc">
-                       Привет, меня зовут Александр, и я фронтенд-разработчик.
-                    </p>
-                    <p class="section-about__desc">
-                        Познакомился с вебом в 2012 г, с тех пор это моя основная работа
+                       Привет, меня зовут Александр. Я фронтенд-разработчик.
                     </p>
                     <h3 class="section-about__title">Что я умею?</h3>
                     <BlockAddInfo />

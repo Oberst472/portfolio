@@ -1,19 +1,36 @@
 <template>
-    <section class="section-portfolio">
+    <section class="section-portfolio" id="portfolio">
         <div class="wrap">
             <div class="section-portfolio__content">
                 <h2 class="section-portfolio__title">Портфолио</h2>
-                <BlockWorks />
+                <div class="section-portfolio__works">
+                    <BlockNav :items="portfolio" @click="openPortfolio"/>
+                    <BlockWorks :items="portfolio" :activePortfolioIndex="activePortfolioIndex"/>
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <script>
-import BlockWorks from '@/components/blocks/works'
+  import { portfolio } from '@/mocks/works.js'
+  import BlockNav from './nav'
+  import BlockWorks from './works'
 export default {
   components: {
+    BlockNav,
     BlockWorks
+  },
+  data () {
+    return {
+      portfolio,
+      activePortfolioIndex: 0
+    }
+  },
+  methods: {
+    openPortfolio(index) {
+      this.activePortfolioIndex = index
+    }
   }
 }
 </script>
@@ -23,14 +40,22 @@ export default {
     background-color: $color--bg;
     .wrap {}
     &__content {
-        padding-top: 30px;
-        height: 100vh;
+        padding: 30px 0 40px 0;
+        @include lg() {
+            /*min-height: 100vh;*/
+            padding-top: 30px 0 0 0;
+        }
     }
     &__title {
-        @include adaptiveFont(20px, 48px);
-        line-height: 58px;
+        @include adaptiveFont(30px, 48px);
+        line-height: 1;
+        padding-bottom: 30px;
         font-weight: $weight--bold;
-        color: $color--text-dark
+        color: $color--text-dark;
+        @include md() {
+            padding-bottom: 0;
+            line-height: 58px;
+        }
 
     }
 }

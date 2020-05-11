@@ -6,19 +6,19 @@ export const portfolio = [
         title: 'Академия интерьера',
         preview: '1.jpg',
         link: 'http://ak-inter.ru/',
-        description: 'Небольшой лендос для студии специализирующейся на дизайне интерьеров. К сайту прикручена CMS Wordpress. Натяжкой на wordpress я не занимался, моя работа в рамках данного проекта - html, css, ванильный js '
+        description: 'Небольшой одностраничник для студии специализирующейся на дизайне интерьеров. Делал верстку + js'
       },
       {
         title: 'Таймлайн растущего ребенка',
         preview: '5.jpg',
         link: 'https://specials.pikabu.ru/pik/timeline/',
-        description: 'Ну оочеь заморочный проект для picabu.ru. Куча анимаций, свистелок и вертелок. Проект сделан на vue.js'
+        description: 'Одностраничный сайт для pikabu. Проект сделан на Vue.js. Над проектом работала команда'
       },
       {
         title: 'Роснефть ко дню победы',
         preview: '15.jpg',
         link: 'https://victory75.tass.ru/',
-        description: 'Проект посвященный дню победы'
+        description: 'Одностраничный, но очень сложный проект посвященный дню победы. Написан на Vue.js. Над проектом работала команда'
       }
     ]
   },
@@ -29,19 +29,19 @@ export const portfolio = [
         title: 'Flame Auto',
         preview: '2.jpg',
         link: 'https://flameauto.ru/',
-        description: 'Интернет магазин запчастей для отечественного автопрома. Достаточно большой адаптивный сайт. На первый взгляд не такой уж и сложный, но при разработке возникали некоторые моменты, которые заставляли поломать голову, особенно при реализации адаптива. Сагазин работает под управлением системы Wordpress. В рамках моих задач была реализована адаптивная верстка, + динамика на ванильном js'
+        description: 'Интернет магазин запчастей для отечественного автопрома. Магазин работает под управлением системы Wordpress. В рамках моих задач была реализована адаптивная верстка, + динамика на ванильном js'
       },
       {
         title: 'Кеша',
         preview: '4.jpg',
-        link: 'https://flameauto.ru/',
-        description: 'Интернет магазин запчастей для отечественного автопрома. Достаточно большой адаптивный сайт. На первый взгляд не такой уж и сложный, но при разработке возникали некоторые моменты, которые заставляли поломать голову, особенно при реализации адаптива. Сагазин работает под управлением системы Wordpress. В рамках моих задач была реализована адаптивная верстка, + динамика на ванильном js'
+        link: 'https://zookeshakzn.ru/',
+        description: 'Многостраничный интернет магазин товаров для братьев наших меньших под управлением CMS Wordpress. Адаптивная верстка и немного нативного js'
       },
       {
         title: 'Кашемир и шелк',
         preview: '7.jpg',
         link: 'https://cashmere.ru/',
-        description: 'Большой и сложный интернет магазин одежды, фронтенд часть написана на Angular. Cложная адаптивная верстка'
+        description: 'Большой и сложный интернет магазин одежды, фронтенд часть написана на Angular. Над проектом работала команда, я делал верстку'
       }
     ]
   },
@@ -50,21 +50,27 @@ export const portfolio = [
     value: [
       {
         title: 'Электронный брокер',
-        preview: '4.jpg',
-        link: 'https://zookeshakzn.ru/',
-        description: 'Многостраничный интернет магазин товаров для братьев наших меньших под управлением CMS Wordpress. Адаптивная верстка и немного нативного js'
+        preview: '3.jpg',
+        link: 'https://agent.broker/',
+        description: 'Многостраничны сайт для компании предоставляющей услуги электронного брокера'
       },
       {
         title: 'Мегафон. Перезагрузка',
         preview: '10.jpg',
-        link: 'https://zookeshakzn.ru/',
-        description: 'Многостраничный интернет магазин товаров для братьев наших меньших под управлением CMS Wordpress. Адаптивная верстка и немного нативного js'
+        link: 'https://perezagruzka.zeh.media/',
+        description: 'Сайт для курсов Мегафон'
       },
       {
         title: 'Конкурс Avito',
         preview: '14.jpg',
         link: 'https://specials.pikabu.ru/avito/avito-challenge/',
-        description: 'Неюольшой сайт для конкурса Picabu и Avito'
+        description: 'Небольшой сайт для конкурса Pikabu и Avito'
+      },
+      {
+        title: 'Сервис чарджбэков Cosmovisa',
+        preview: '17.jpg',
+        link: 'https://specials.pikabu.ru/avito/avito-challenge/',
+        description: 'Реализовывал админку клиентов и модератора. Проделана очень большая и сложная работа, самописный реалтайм чат, система тиккетов и многое другогое'
       }
     ]
   },
@@ -75,43 +81,43 @@ export const portfolio = [
         title: 'Новогодний тест для pikabu.ru',
         preview: '5.jpg',
         link: 'https://specials.pikabu.ru/open2020/',
-        description: 'Новогодний тест для сайта picabu.ru. Сделан на vue.js'
+        description: 'Новогодний тест для сайта pikabu.ru. Сделан на Vue.js'
       },
       {
         title: 'Игра Memory',
         preview: '13.jpg',
         link: 'https://cs.specials.pikabu.ru/games/memory/',
-        description: 'Игра Memory Сделана на vue.js'
+        description: 'Игра Memory Сделана на Vue.js'
       },
       {
         title: 'Взломай игру',
         preview: '8.jpg',
         link: 'https://specials.sports.ru/mutator/',
-        description: 'Реклама футбольных бутс в виде игры. Проект реализован на vue.js. В игре достаточно сложная логика, разные вероятности результатов в зависимости от прошлых ходов и еще кучи факторов. Сложный и интересный проект'
+        description: 'Реклама футбольных бутс в виде игры. Проект реализован на Vue.js. В игре достаточно сложная логика, различные вероятности результатов в зависимости от прошлых ходов и еще кучи факторов. Сложный и интересный проект'
       },
       {
         title: 'Приведи Спартак к финалу',
         preview: '9.jpg',
         link: 'https://www.sports.ru/tribuna/blogs/parimatchru/2710417.html',
-        description: 'Мини игра для сайта sports.ru. Написана на vue.js'
+        description: 'Мини игра для сайта sports.ru. Написана на Vue.js'
       },
       {
         title: 'Захвати мир с eBay',
         preview: '11.jpg',
         link: 'https://specials.pikabu.ru/ebay/game/',
-        description: 'Мини игра для совместного проекта pikabu и eBay. Написана на vue.js'
+        description: 'Мини игра для совместного проекта pikabu и eBay. Написана на Vue.js'
       },
       {
         title: 'Интерактивный квест',
         preview: '12.jpg',
         link: 'https://quest.extremum.gg/',
-        description: 'Мини игра для совместного проекта pikabu и eBay. Написана на vue.js'
+        description: 'Квест для геймеров. Написан на Vue.js'
       },
       {
         title: 'Тест Дакар',
         preview: '16.jpg',
         link: 'http://s5o.ru/special/motul-dacar-test/',
-        description: 'Мини игра для совместного проекта pikabu и eBay. Написана на vue.js'
+        description: 'Небольшой тест для сайта sports.ru Написан на Vue.js'
       },
 
     ]

@@ -12,28 +12,25 @@
             <transition name="top" mode="out-in">
                 <div class="section-about__add-content" v-if="isActive === 'html'" key="html">
                     <p class="section-about__desc">
-                        HTML и CSS знаю практически досконально. Верстаю и на флексах и на гридах. Боевой препроцессор для разработки - SCSS, в случае необходимости без проблем использую LESS и Stylus. Понимаю и использую принципы методологии БЭМ
+                        HTML и CSS знаю практически досконально. Из препроцессоров предпочитаю SCSS, также знаю LESS и Stylus. Понимаю и использую принципы методологии БЭМ
 
                     </p>
                 </div>
                 <div class="section-about__add-content" v-if="isActive === 'js'" key="js">
                     <p class="section-about__desc">
-                        Хорошо знаю js, активно использую фичи свежих стандартов
+                        В основном работаю с Vue.js + Vue Router + Vuex.
                     </p>
                     <p class="section-about__desc">
-                        Основной боевой фреймворк Vue.js. Знаю на высоком уровне, слежу за обновлениями, в курсе всех движений вокруг этого фреймворка. Естественно Vue Router и Vuex.
-                    </p>
-                    <p class="section-about__desc">
-                        Для SSR приложений предпочитаю <a title="Перейти на сайт" class="section-about__link" href="https://ru.nuxtjs.org/" target="_blank">Nuxt.js</a>. Люблю его за простоту и минималистичность. Приходилось работать с
-                        <a title="Перейти на сайт" class="section-about__link" href="https://quasar.dev/" target="_blank">Quasar</a>  Поверхностно знаком с Angular и React, серьезные приложения на них не писал,
+                        Для SSR приложений предпочитаю <a title="Перейти на сайт" class="section-about__link" href="https://ru.nuxtjs.org/" target="_blank">Nuxt.js</a>.  Приходилось работать с
+                        <a title="Перейти на сайт" class="section-about__link" href="https://quasar.dev/" target="_blank">Quasar</a>.  Поверхностно знаком с Angular и React, опыта коммерческой разработки с ними не было,
                         знакомился для общего развития.
                     </p>
                     <p class="section-about__desc">
-                        Знаком с <a title="Перейти на сайт" class="section-about__link" href="https://nodejs.org/en/" target="_blank">Node.js</a>. Коммерческие проекты на нем не делал. Для себя писал довольно сложный бекенд на node.js в связке с
-                        <a title="Перейти на сайт" class="section-about__link" href="https://www.mongodb.com/" target="_blank">mongoDB</a>, как в прочем и продолжаю писать, так что если заставит нужда, поднять rest сервер или написать необходимую бекенд логику смогу.
+                        Знаком с <a title="Перейти на сайт" class="section-about__link" href="https://nodejs.org/en/" target="_blank">Node.js</a>. Коммерческие проекты на нем не делал. Для себя писал бекенд на node.js +
+                        <a title="Перейти на сайт" class="section-about__link" href="https://www.mongodb.com/" target="_blank">mongoDB</a>, так что поднять rest сервер или написать необходимую бекенд логику смогу.
                     </p>
                     <p class="section-about__desc">
-                        При разработке использую git. Работал с <a title="Перейти на сайт" class="section-about__link" href="https://gulpjs.com/" target="_blank">gulp</a>, в последнее время больше работаю с
+                        При разработке использую git. Раньше активно работал с <a title="Перейти на сайт" class="section-about__link" href="https://gulpjs.com/" target="_blank">gulp</a>, в последнее время работаю с
                         <a title="Перейти на сайт" class="section-about__link" href="https://webpack.js.org/" target="_blank">webpack</a>
                     </p>
                 </div>
@@ -100,11 +97,12 @@
         margin-bottom: $gutter / 2;
     }
     &__link {
-        text-decoration: none;
-        color: $color--positive;
+        color: #E4E4E4;
+        text-decoration: underline;
+        /*color: #2bba17;*/
         transition: color 0.3s ease;
         &:hover {
-            color: $color--text-base
+            color: $color--positive
         }
         &:active {
             opacity: 0.8;

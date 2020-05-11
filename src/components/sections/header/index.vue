@@ -4,8 +4,8 @@
             <div class="section-header__content">
                 <h1 class="section-header__title">Мое имя Александр</h1>
                 <span class="section-header__subtitle">я фронтенд-разработчик</span>
-                <UiBtn class="section-header__works-btn">Мои работы</UiBtn>
-                <UiBtn class="section-header__about-btn" theme="transparent">Обо мне</UiBtn>
+                <UiBtn class="section-header__works-btn" @click="goToComponent('#portfolio')">Последние работы</UiBtn>
+                <UiBtn class="section-header__about-btn" theme="transparent" @click="goToComponent('#about')">Обо мне</UiBtn>
             </div>
         </div>
     </section>
@@ -14,6 +14,12 @@
 <script>
 export default {
   methods: {
+    goToComponent(elem) {
+      const $target = document.querySelector(elem)
+      $target.scrollIntoView({
+        behavior: "smooth"
+      })
+    }
   }
 }
 </script>
@@ -79,6 +85,7 @@ export default {
             }
         }
         &__works-btn {
+            text-transform: lowercase;
             margin-top: 30px;
             @include md() {
                 margin-top: 60px;
@@ -87,6 +94,7 @@ export default {
 
         }
         &__about-btn {
+            text-transform: lowercase;
             margin-top: 25px;
             @include md() {
                 max-width: 283px;
