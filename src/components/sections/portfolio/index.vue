@@ -16,47 +16,51 @@
   import { portfolio } from '@/mocks/works.js'
   import BlockNav from './nav'
   import BlockWorks from './works'
-export default {
-  components: {
-    BlockNav,
-    BlockWorks
-  },
-  data () {
-    return {
-      portfolio,
-      activePortfolioIndex: 0
-    }
-  },
-  methods: {
-    openPortfolio(index) {
-      this.activePortfolioIndex = index
+
+  export default {
+    components: {
+      BlockNav,
+      BlockWorks
+    },
+    data () {
+      return {
+        portfolio,
+        activePortfolioIndex: 0
+      }
+    },
+    methods: {
+      openPortfolio (index) {
+        this.activePortfolioIndex = index
+      }
     }
   }
-}
 </script>
 
 <style scoped lang="scss">
-.section-portfolio {
-    background-color: $color--bg;
-    .wrap {}
-    &__content {
-        padding: 30px 0 40px 0;
-        @include lg() {
-            min-height: 100vh;
-            padding-top: 30px 0 0 0;
-        }
-    }
-    &__title {
-        @include adaptiveFont(30px, 48px);
-        line-height: 1;
-        padding-bottom: 30px;
-        font-weight: $weight--bold;
-        color: $color--text-dark;
-        @include md() {
-            padding-bottom: 0;
-            line-height: 58px;
+    .section-portfolio {
+        background-color: $color--bg;
+
+        &__content {
+            padding: 30px 0 40px 0;
+            @include lg() {
+                min-height: 100vh;
+            }
+            @include lg() {
+                padding: 30px 0 0 0;
+            }
         }
 
+        &__title {
+            @include adaptiveFont(30px, 48px);
+            line-height: 1;
+            padding-bottom: 30px;
+            font-weight: $weight--bold;
+            color: $color--text-dark;
+            @include md() {
+                padding-bottom: 0;
+                line-height: 58px;
+            }
+
+        }
     }
-}
 </style>

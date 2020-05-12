@@ -8,87 +8,88 @@
         class="ui-btn"
         :target="this.href ? '_blank' : ''"
     >
-       <slot />
+        <slot/>
     </component>
 </template>
 
 <script>
-export default {
-  components: {},
-  data () {
-    return {}
-  },
-  props: {
-    theme: {
-      type: String,
-      default: 'base'
+  export default {
+    components: {},
+    data () {
+      return {}
     },
-    small: {
-      type: Boolean,
-      default: false
-    },
-    borderNone: {
-      type: Boolean,
-      default: false
-    },
-    loading: {
-      type: Boolean,
-      default: false
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    },
-    fill: Boolean,
-    shadow: Boolean,
-    stretch: Boolean,
-    href: String,
-    to: {
-      type: Object,
-      default: null
-    }
-  },
-  computed: {
-    classes () {
-      return {
-        [`ui-btn--theme-${this.theme}`]: true,
-        'ui-btn--fill': this.fill,
-        'ui-btn--size-default': !this.small,
-        'ui-btn--size-small': this.small,
-        'ui-btn--border-none': this.borderNone,
-        'ui-btn--disabled': this.disabled,
-        'ui-btn--loading': this.loading
+    props: {
+      theme: {
+        type: String,
+        default: 'base'
+      },
+      small: {
+        type: Boolean,
+        default: false
+      },
+      borderNone: {
+        type: Boolean,
+        default: false
+      },
+      loading: {
+        type: Boolean,
+        default: false
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      },
+      fill: Boolean,
+      shadow: Boolean,
+      stretch: Boolean,
+      href: String,
+      to: {
+        type: Object,
+        default: null
       }
     },
-    tag () {
-      if (this.href) {
-        return 'a'
-      } else if (this.to) {
-        return 'router-link'
-      } else {
-        return 'button'
+    computed: {
+      classes () {
+        return {
+          [`ui-btn--theme-${this.theme}`]: true,
+          'ui-btn--fill': this.fill,
+          'ui-btn--size-default': !this.small,
+          'ui-btn--size-small': this.small,
+          'ui-btn--border-none': this.borderNone,
+          'ui-btn--disabled': this.disabled,
+          'ui-btn--loading': this.loading
+        }
+      },
+      tag () {
+        if (this.href) {
+          return 'a'
+        } else if (this.to) {
+          return 'router-link'
+        } else {
+          return 'button'
+        }
       }
-    }
-  },
-  methods: {
-    onClick () {
-      if (!this.disabled) {
-        this.$emit('click')
+    },
+    methods: {
+      onClick () {
+        if (!this.disabled) {
+          this.$emit('click')
+        }
       }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
     .ui-btn {
-        background-color: transparent;
-        border: 1px solid #D9D9D9;
         line-height: 0;
+        border: 1px solid #D9D9D9;
+        background-color: transparent;
         transition-duration: 0.3s;
         @include sm() {
             cursor: pointer;
         }
+
         &:hover {
         }
 
@@ -108,6 +109,7 @@ export default {
                     }
                 }
             }
+
             &-transparent {
                 background-color: transparent;
                 color: $color--snow;
@@ -120,6 +122,7 @@ export default {
                 }
             }
         }
+
         &--size {
             &-default {
                 height: 50px;
@@ -131,22 +134,25 @@ export default {
                     height: 61px;
                 }
             }
+
             &-small {
                 height: 30px;
                 padding: 5px;
                 font-size: 14px;
             }
         }
+
         &--border-none {
             border: 0
         }
 
         &--loading {
-            font-size: 0;
             position: relative;
-            pointer-events: none;
-            cursor: progress;
+            font-size: 0;
             opacity: 0.7;
+            cursor: progress;
+            pointer-events: none;
+
             &:before {
                 content: '';
                 position: absolute;
@@ -164,14 +170,16 @@ export default {
                 animation-timing-function: linear;
             }
         }
+
         &--disabled {
             opacity: 0.7;
             pointer-events: none;
         }
     }
+
     @keyframes rotate {
         to {
-          transform: rotate(0deg);
+            transform: rotate(0deg);
         }
         from {
             transform: rotate(-360deg);

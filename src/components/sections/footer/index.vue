@@ -17,33 +17,40 @@
 </script>
 
 <style scoped lang="scss">
-.section-footer {
-    /*background-color: #ECECEC;*/
-    background-image: linear-gradient(112.72deg, #87846A 17.66%, #ACAA95 98.41%);;
-    &__content {
-        height: 100px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: $color--text-light
-    }
-    &__copyr {
-        font-weight: 300;
-        font-size: 16px;
-    }
-    &__love {
-        display: inline-flex;
-        font-size: 18px;
-        font-weight: 300;
-    }
-    &__icon {
-        margin: 0 5px;
-width: 16px;
-        &-heart {
-            animation-name: heart;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
+    .section-footer {
+        background-image: linear-gradient(112.72deg, #87846A 17.66%, #ACAA95 98.41%);;
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            color: $color--text-light;
+            @include md() {
+                height: 80px;
+            }
+        }
+
+        &__copyr {
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        &__love {
+            display: inline-flex;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        &__icon {
+            width: 16px;
+            margin: 0 5px;
+
+            &-heart {
+                animation-name: heart;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
         }
     }
-}
 </style>

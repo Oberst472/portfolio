@@ -3,11 +3,13 @@
         @content
     }
 }
+
 @mixin md {
     @media screen and (min-width: map-get(map-get($mobile, 'breakpoints'), 'md')) {
         @content
     }
 }
+
 @mixin lg {
     @media screen and (min-width: map-get(map-get($mobile, 'breakpoints'), 'lg')) {
         @content
@@ -28,6 +30,7 @@
         max-width: map-get(map-get($mobile, 'container'), 'lg');
     }
 }
+
 //миксин для адаптивного шрифта
 @mixin adaptiveFont($f-min, $f-max, $fallback: false) {
     $w-min: map-get(map-get($mobile, 'breakpoints'), 'sm');
@@ -41,7 +44,7 @@
         @if ($fallback) {
             font-size: $fallback;
         }
-        font-size: calc( #{$k} * 100vw + #{$b} );
+        font-size: calc(#{$k} * 100vw + #{$b});
 
     }
 

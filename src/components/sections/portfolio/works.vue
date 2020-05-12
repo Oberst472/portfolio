@@ -9,7 +9,7 @@
                     <div class="block-works__item-desc">
                         <span class="block-works__item-title">{{ item.title }}</span>
                         <span class="block-works__item-description">{{ item.description }}</span>
-<!--                        <a :href="item.link" class="block-works__item-link" rel="nofollow" target="_blank">Перейти на сайт</a>-->
+                        <!--                        <a :href="item.link" class="block-works__item-link" rel="nofollow" target="_blank">Перейти на сайт</a>-->
                         <div class="block-works__item-link-box">
                             <span>Cсылку нужно копировать и вставлять в адресную строку в ручную</span>
                             <span class="block-works__item-link-text">{{ item.link }}</span>
@@ -26,7 +26,8 @@
     props: {
       items: {
         type: Array,
-        default: () => {}
+        default: () => {
+        }
       },
       activePortfolioIndex: {
         type: [Number, String],
@@ -38,9 +39,10 @@
 
 <style scoped lang="scss">
     .block-works {
-@include md() {
-    display: flex;
-}
+        @include md() {
+            display: flex;
+        }
+
         &__items {
             display: grid;
             margin-top: 15px;
@@ -57,27 +59,27 @@
         }
 
         &__item {
-            height: max-content;
             align-self: start;
-           //@include lg() {
-               // position: relative;
-               // display: flex;
-               // height: 0;
-               // padding-bottom: 60%;
+            height: max-content;
+            //@include lg() {
+            // position: relative;
+            // display: flex;
+            // height: 0;
+            // padding-bottom: 60%;
             //}
 
             &-box {
                 @include lg() {
                     position: relative;
                 }
-               //@include lg() {
-                   //position: absolute;
-                   //top: 0;
-                  // left: 0;
-                   //width: 100%;
-                   //height: 100%;
-                   //tab-index: 0;
-               //}
+                //@include lg() {
+                //position: absolute;
+                //top: 0;
+                // left: 0;
+                //width: 100%;
+                //height: 100%;
+                //tab-index: 0;
+                //}
 
                 &:after {
                     @include lg() {
@@ -98,6 +100,7 @@
                         opacity: 1 !important;
                         pointer-events: auto;
                     }
+
                     .block-works__item-img-box {
                         &:before {
                             opacity: 0.7;
@@ -197,11 +200,13 @@
                 margin: 10px 0;
                 display: block;
             }
+
             &-link-box {
                 display: flex;
                 flex-direction: column;
 
             }
+
             &-link-text {
                 color: $color--primary;
                 display: block;

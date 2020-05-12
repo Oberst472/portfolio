@@ -69,7 +69,6 @@
 
         &__add-btn-box {
             position: relative;
-            bottom: 100%;
             left: -1px;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -89,7 +88,6 @@
                 &--js {
                     left: 50%;
                 }
-
             }
         }
 
@@ -109,15 +107,15 @@
             background-color: transparent;
             cursor: pointer;
             transition-duration: 0.3s;
+            &:hover {
+                @include md() {
+                    color: $color--positive
+                }
+            }
 
             &--active {
                 pointer-events: none;
-
-                &:hover {
-                    & ~ .section-about__add-btn-box-line {
-                        background-color: $color--positive;
-                    }
-                }
+                
             }
         }
 
@@ -126,6 +124,7 @@
             margin-bottom: $gutter / 2;
             color: #E4E4E4;
             text-align: left;
+
             &:last-child {
                 margin-bottom: 0;
             }

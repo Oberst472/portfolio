@@ -17,7 +17,8 @@
             <p class="section-form__add-text" v-if="!isShowError">
                 Оставьте свой телефон, e-mail или аккаунт в цоц. сетях и я обязательно вам отвечу
             </p>
-            <p class="section-form__add-text section-form__add-text--error" v-else>Что то пошло не так! Попробуйте отправить форму еще раз!</p>
+            <p class="section-form__add-text section-form__add-text--error" v-else>Что то пошло не так! Попробуйте
+                                                                                   отправить форму еще раз!</p>
         </div>
         <div class="section-form__thanks" v-if="isShowThanks">
             <div class="wrap">
@@ -80,10 +81,10 @@
     },
     watch: {
       form: {
-        handler() {
-            if((this.isShowError && this.form.name.length) || (this.isShowError && this.form.contact.length)) {
-              this.isShowError = false
-            }
+        handler () {
+          if ((this.isShowError && this.form.name.length) || (this.isShowError && this.form.contact.length)) {
+            this.isShowError = false
+          }
         },
         deep: true
       }
@@ -93,29 +94,33 @@
 
 <style scoped lang="scss">
     .section-form {
-        background-color: #2B3742;
-        padding: $gutter 0;
         position: relative;
+        padding: $gutter 0;
+        background-color: #2B3742;
+        @include md() {
+            padding-bottom: $gutter + 5px;
+        }
 
         &__title {
-            @include adaptiveFont(16px, 36px);
+            @include adaptiveFont(30px, 36px);
             line-height: 1.2;
             color: $color--text-light;
-
-
         }
 
         &__subtitle {
-            @include adaptiveFont(12px, 24px);
+            @include adaptiveFont(18px, 24px);
             line-height: 1.2;
             color: #D8D8D8;
         }
 
         &__form {
-            margin-top: $gutter;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr;
             grid-gap: $gutter;
+            margin-top: $gutter;
+            @include md() {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         &__label {
@@ -168,9 +173,10 @@
 
         &__add-text {
             @include adaptiveFont(12px, 16px);
+            margin-top: $gutter;
             line-height: 1.2;
             color: #D8D8D8;
-            margin-top: $gutter;
+
             &--error {
                 color: $color--negative
             }

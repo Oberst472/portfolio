@@ -5,31 +5,32 @@
                 <h1 class="section-header__title">Мое имя Александр</h1>
                 <span class="section-header__subtitle">я фронтенд-разработчик</span>
                 <UiBtn class="section-header__works-btn" @click="goToComponent('#portfolio')">Последние работы</UiBtn>
-                <UiBtn class="section-header__about-btn" theme="transparent" @click="goToComponent('#about')">Обо мне</UiBtn>
+                <UiBtn @click="goToComponent('#about')" class="section-header__about-btn" theme="transparent">Обо мне
+                </UiBtn>
             </div>
         </div>
     </section>
 </template>
 
 <script>
-export default {
-  methods: {
-    goToComponent(elem) {
-      const $target = document.querySelector(elem)
-      $target.scrollIntoView({
-        behavior: "smooth"
-      })
+  export default {
+    methods: {
+      goToComponent (elem) {
+        const $target = document.querySelector(elem)
+        $target.scrollIntoView({
+          behavior: 'smooth'
+        })
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
     .section-header {
-        width: 100%;
-        background-image: linear-gradient(123.28deg, #423B28 53.4%, #816F43 106.32%);
-
         position: relative;
+        width: 100%;
+
+        background-image: linear-gradient(123.28deg, #423B28 53.4%, #816F43 106.32%);
         @include md() {
             height: 100vh;
         }
@@ -48,20 +49,23 @@ export default {
             pointer-events: none;
             opacity: 0.1;
         }
+
         .wrap {
             height: 100%;
         }
+
         &__content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-           justify-content: center;
             padding: 80px 0;
             @include md() {
                 padding: 0;
             }
         }
+
         &__title {
             text-align: center;
             font-weight: $weight--bold;
@@ -72,6 +76,7 @@ export default {
                 text-align: left;
             }
         }
+
         &__subtitle {
             text-align: center;
             color: #d8d8d8;
@@ -84,6 +89,7 @@ export default {
                 text-align: left;
             }
         }
+
         &__works-btn {
             text-transform: lowercase;
             margin-top: 30px;
@@ -93,6 +99,7 @@ export default {
             }
 
         }
+
         &__about-btn {
             text-transform: lowercase;
             margin-top: 25px;

@@ -18,7 +18,8 @@
     props: {
       items: {
         type: Array,
-        default: () => {}
+        default: () => {
+        }
       }
     },
     data () {
@@ -27,7 +28,7 @@
       }
     },
     methods: {
-      openPortfolio(index) {
+      openPortfolio (index) {
         this.activeBtn = index
         this.$emit('click', index)
       }
@@ -64,6 +65,7 @@
         @include md() {
             cursor: pointer;
         }
+
         @include md() {
             margin-top: 20px;
             padding-top: 20px;
