@@ -122,8 +122,6 @@
             margin-bottom: $gutter / 2;
             color: #E4E4E4;
             text-align: center;
-
-
         }
 
     }
