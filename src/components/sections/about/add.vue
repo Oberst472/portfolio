@@ -115,7 +115,7 @@
 
             &--active {
                 pointer-events: none;
-                
+
             }
         }
 

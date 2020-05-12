@@ -29,7 +29,6 @@
     .section-header {
         position: relative;
         width: 100%;
-
         background-image: linear-gradient(123.28deg, #423B28 53.4%, #816F43 106.32%);
         @include md() {
             height: 100vh;
@@ -42,7 +41,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url('~@/assets/images/header-bg-6.jpg');
+            background-image: url('~@/assets/images/header-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             mix-blend-mode: screen;
