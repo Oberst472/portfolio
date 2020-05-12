@@ -108,7 +108,7 @@ export const portfolio = [
         description: 'Мини игра для совместного проекта pikabu и eBay. Написана на Vue.js'
       },
       {
-        title: 'Интерактивный квест',
+        title: 'Интерактивный квест для геймеров',
         preview: '12.jpg',
         link: 'https://quest.extremum.gg/',
         description: 'Квест для геймеров. Написан на Vue.js'

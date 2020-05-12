@@ -4,19 +4,15 @@
             <div class="section-about__content">
                 <div class="section-about__photo-box">
                     <div class="section-about__photo-sub-box">
-                        <transition name="fade" mode="out-in">
-                            <UiBtn class="section-about__btn" theme="transparent" @click="isActive = true" v-if="!isActive">Показать фото</UiBtn>
-                            <img class="section-about__photo" src="@/assets/images/photo.jpg" alt="Фото" v-else>
-                        </transition>
+                        <img alt="Фото" class="section-about__photo" src="@/assets/images/photo.jpg">
                     </div>
+                    <p class="section-about__desc">
+                        Привет, меня зовут Александр. <br> Я люблю web и я фронтенд-разработчик.
+                    </p>
                 </div>
                 <div class="section-about__desc-box">
-                    <h2 class="section-about__title">Кто я?</h2>
-                    <p class="section-about__desc">
-                       Привет, меня зовут Александр. Я фронтенд-разработчик.
-                    </p>
                     <h3 class="section-about__title">Что я умею?</h3>
-                    <BlockAddInfo />
+                    <BlockAddInfo/>
                 </div>
             </div>
         </div>
@@ -25,6 +21,7 @@
 
 <script>
   import BlockAddInfo from './add'
+
   export default {
     components: {
       BlockAddInfo
@@ -39,32 +36,47 @@
 
 <style scoped lang="scss">
     .section-about {
+        width: 100%;
         background-image: linear-gradient(112deg, #87846A 30%, #ACAA95 100%);
         background-repeat: no-repeat;
-        width: 100%;
 
         &__content {
-            padding-top: $gutter * 2;
-            padding-bottom: $gutter * 2;
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            grid-gap: $gutter;
-            min-height: 100vh;
             box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: $gutter / 2;
+            padding-top: $gutter;
+            padding-bottom: $gutter;
+            @include md() {
+                grid-template-columns: 350px 1fr;
+                grid-gap: $gutter;
+                padding-top: $gutter * 2;
+                padding-bottom: $gutter * 2;
+            }
+
         }
+
         &__photo-box {
             display: inline-flex;
-            align-items: center;
-        }
-        &__photo-sub-box {
-            display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 $gutter * 2;
+        }
+
+        &__photo-sub-box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 0;
             padding-bottom: 100%;
-            position: relative;
+            @include md() {
+                width: 100%;
+            }
         }
+
         &__desc-box {
             flex-shrink: 0;
             display: inline-flex;
@@ -72,6 +84,7 @@
             justify-content: center;
 
         }
+
         &__btn {
             position: absolute;
             top: 50%;
@@ -79,28 +92,37 @@
             transform: translate(-50%, -50%);
             width: 100%;
         }
+
         &__photo {
-            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
             border-radius: 50%;
+            object-fit: cover;
+            @include md() {
+                border-radius: 50%;
+            }
         }
+
         &__title {
-            text-align: left;
+            margin-top: $gutter;
+            margin-bottom: $gutter / 2;
             font-size: 48px;
             line-height: 1;
             color: $color--text-light;
-            margin-bottom: $gutter;
+            text-align: center;
 
         }
+
         &__desc {
             @include adaptiveFont(14px, 16px);
-            color: #E4E4E4;
-            text-align: left;
+            margin-top: $gutter / 2;
             margin-bottom: $gutter / 2;
+            color: #E4E4E4;
+            text-align: center;
+
 
         }
 

@@ -2,7 +2,7 @@
     <section class="section-portfolio" id="portfolio">
         <div class="wrap">
             <div class="section-portfolio__content">
-                <h2 class="section-portfolio__title">Портфолио</h2>
+                <h2 class="section-portfolio__title">Последние работы</h2>
                 <div class="section-portfolio__works">
                     <BlockNav :items="portfolio" @click="openPortfolio"/>
                     <BlockWorks :items="portfolio" :activePortfolioIndex="activePortfolioIndex"/>
@@ -42,7 +42,7 @@ export default {
     &__content {
         padding: 30px 0 40px 0;
         @include lg() {
-            /*min-height: 100vh;*/
+            min-height: 100vh;
             padding-top: 30px 0 0 0;
         }
     }
