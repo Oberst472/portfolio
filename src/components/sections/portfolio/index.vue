@@ -46,7 +46,7 @@
                 min-height: 100vh;
             }
             @include lg() {
-                padding: 30px 0 0 0;
+                padding: 30px 0;
             }
         }
 

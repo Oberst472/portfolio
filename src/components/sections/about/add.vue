@@ -13,7 +13,7 @@
             <transition name="top" mode="out-in">
                 <div class="section-about__add-content" v-if="isActive === 'html'" key="html">
                     <p class="section-about__desc">
-                        HTML и CSS знаю очень хорошо. Вестаю кроссбраузерно (если речь не идет о старых IE) и адаптивно.
+                        HTML и CSS знаю практически досконально. Вестаю кроссбраузерно (если речь не идет о старых IE) и адаптивно.
                     </p>
                     <p class="section-about__desc">
                         Являюсь приверженцем секты mobile-first. Из препроцессоров предпочитаю SCSS, также знаю LESS и
